@@ -117,13 +117,24 @@ class BoardingHouseResource extends Resource
     {
         return $table
             ->columns([
-                //
+                Tables\Columns\TextColumn::make('name')
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('city.name')
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('category.name')
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('price')
+                    ->searchable(),
+                Tables\Columns\ImageColumn::make('thumbnail')
+                    ->searchable(),
             ])
             ->filters([
                 //
             ])
             ->actions([
+                Tables\Actions\ViewAction::make(),
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
