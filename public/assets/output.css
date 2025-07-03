@@ -1442,3 +1442,12 @@ body{
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(145 191 119 / var(--tw-ring-opacity));
 }
+
+.text-red-500 {
+    --tw-text-opacity: 1;
+    color: rgb(239 68 68 / var(--tw-text-opacity));
+}
+
+.border-red-500 {
+    border: 2px solid rgb(239 68 68);
+}

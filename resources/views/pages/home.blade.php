@@ -48,7 +48,7 @@
             <div class="swiper-wrapper">
                 @foreach ($popularBoardingHouses as $boardingHouse)
                     <div class="swiper-slide !w-fit">
-                        <a href="details.html" class="card">
+                        <a href="{{ route('kos.show', $boardingHouse->slug) }}" class="card">
                             <div
                                 class="flex flex-col w-[250px] shrink-0 rounded-[30px] border border-[#F1F2F6] p-4 pb-5 gap-[10px] hover:border-[#91BF77] transition-all duration-300">
                                 <div class="flex w-full h-[150px] shrink-0 rounded-[30px] bg-[#D9D9D9] overflow-hidden">
@@ -100,7 +100,7 @@
         </div>
         <div class="grid grid-cols-2 gap-4">
             @foreach ($cities as $city)
-                <a href="cities.html" class="card">
+                <a href="{{ route('city.show', $city->slug) }}" class="card">
                     <div
                         class="flex items-center rounded-[22px] p-[10px] gap-3 bg-white border border-white overflow-hidden hover:border-[#91BF77] transition-all duration-300">
                         <div
@@ -130,7 +130,7 @@
         </div>
         <div class="flex flex-col gap-4">
             @foreach ($boardingHouses as $boardingHouse)
-                <a href="details.html" class="card">
+                <a href="{{ route('kos.show', $boardingHouse->slug) }}" class="card">
                     <div
                         class="flex rounded-[30px] border border-[#F1F2F6] p-4 gap-4 bg-white hover:border-[#91BF77] transition-all duration-300">
                         <div class="flex w-[120px] h-[183px] shrink-0 rounded-[30px] bg-[#D9D9D9] overflow-hidden">
